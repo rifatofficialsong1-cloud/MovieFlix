@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MovieFlix - Watch Videos with Just One Ad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <h1 class="logo">Movie<span>Flix</span></h1>
+            <button class="menu-btn">☰</button>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search videos...">
+            <button id="searchBtn">🔍</button>
+        </div>
+
+        <!-- Categories -->
+        <div class="categories">
+            <button class="cat-btn active">All</button>
+            <button class="cat-btn">Drama</button>
+            <button class="cat-btn">Movies</button>
+            <button class="cat-btn">Music</button>
+            <button class="cat-btn">Trailers</button>
+            <button class="cat-btn">Comedy</button>
+            <button class="cat-btn">Education</button>
+        </div>
+
+        <!-- Video Grid -->
+        <div class="video-grid" id="videoGrid"></div>
+
+        <!-- Ad Modal (Only One Ad) -->
+        <div id="adModal" class="ad-modal">
+            <div class="ad-content">
+                <h2>Advertisement</h2>
+                <p class="ad-subtitle">Please wait 5 seconds</p>
+                <div class="ad-box">
+                    <img src="https://via.placeholder.com/300x250/ff0000/ffffff?text=MovieFlix+Ad" alt="Advertisement">
+                    <div class="ad-timer" id="adTimer">5</div>
+                </div>
+                <button id="skipAd" disabled>Please wait...</button>
+            </div>
+        </div>
+
+        <!-- Video Player Modal -->
+        <div id="playerModal" class="player-modal">
+            <div class="player-content">
+                <button class="close-btn" id="closePlayer">✕</button>
+                <div id="videoPlayer"></div>
+                <div class="video-info">
+                    <h3 id="videoTitle"></h3>
+                    <p id="videoDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Telegram WebApp Support -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="script.js"></script>
+</body>
+              </html>
